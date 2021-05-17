@@ -1,0 +1,67 @@
+Last login: Thu May 13 18:15:32 on ttys000
+(base) Andreas-MacBook-Air:~ andreafought$ python
+Python 3.8.5 (default, Sep  4 2020, 02:22:02) 
+[Clang 10.0.0 ] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> well_height=125
+>>> daily_distance=30
+>>> nightly_distance
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'nightly_distance' is not defined
+>>> nightly_distance=20
+>>> snail_position=0
+>>> days=0
+>>> while snail_position<well_height:
+... days+=1
+  File "<stdin>", line 2
+    days+=1
+    ^
+IndentationError: expected an indented block
+>>> while snail_position<well_height:
+...     days+=1
+...     snail_position+=daily_distance-night_retreat
+...     print("Days:",days,"Snail position:",snail_position,"cm")
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+NameError: name 'night_retreat' is not defined
+>>>  while snail_position<well_height:
+  File "<stdin>", line 1
+    while snail_position<well_height:
+    ^
+IndentationError: unexpected indent
+>>> ...     days+=1
+  File "<stdin>", line 1
+    ...     days+=1
+            ^
+SyntaxError: invalid syntax
+>>> ...     snail_position+=daily_distance-night_retreat
+  File "<stdin>", line 1
+    ...     snail_position+=daily_distance-night_retreat
+            ^
+SyntaxError: invalid syntax
+>>> ...     print("Days:",days,"Snail position:",snail_position,"cm")
+  File "<stdin>", line 1
+    ...     print("Days:",days,"Snail position:",snail_position,"cm")
+            ^
+SyntaxError: invalid syntax
+>>> while snail_position<well_height:
+...     days+=1
+...     snail_position+=daily_distance-nightly_distance
+...     print("Days:",days,"Snail position:",snail_position,"cm")
+... 
+Days: 2 Snail position: 10 cm
+Days: 3 Snail position: 20 cm
+Days: 4 Snail position: 30 cm
+Days: 5 Snail position: 40 cm
+Days: 6 Snail position: 50 cm
+Days: 7 Snail position: 60 cm
+Days: 8 Snail position: 70 cm
+Days: 9 Snail position: 80 cm
+Days: 10 Snail position: 90 cm
+Days: 11 Snail position: 100 cm
+Days: 12 Snail position: 110 cm
+Days: 13 Snail position: 120 cm
+Days: 14 Snail position: 130 cm
+>>> 
